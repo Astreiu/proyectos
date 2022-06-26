@@ -719,3 +719,13 @@ body {
 }
 
 /* Fin Media Query */
+
+/* Animaciones y Transiciones */
+
+.header a:hover {
+  color: black;
+}
+
+.menu__lista__objeto:hover {
+  transform: scale(1.1);
+}
