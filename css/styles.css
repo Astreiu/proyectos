@@ -1,29 +1,731 @@
+/*  
+Letras
+
+font-family: 'Poppins', 'Times New Roman', sans-serif;
+font-family: 'Nunito','Times New Roman', sans-serif;
+
+Colores Letras
+
+color: aliceblue;
+color: black;
+
+Colores de Fondo
+
+background-color: rgba(80, 80, 80, 0.3);
+background-color: rgba(160, 160, 160, 0.7);
+
+*/
+
+/* Pagina Inicio */
+
+/*
+
+Posibles Fuentes
+
+-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Inicio Maquetado Grid */
 
-.header__changes,
-footer {
+.container__index {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "carrusel carrusel carrusel"
+    "bienvenida bienvenida bienvenida"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.carrusel {
+  grid-area: carrusel;
+}
+
+.bienvenida {
+  grid-area: bienvenida;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.container__historia {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "historia__up historia__up historia__up"
+    "historia__down historia__down historia__down"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.historia__up {
+  grid-area: historia__up;
+}
+
+.historia__down {
+  grid-area: historia__down;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.container__discografia {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "discografia__up discografia__up discografia__up"
+    "discografia__down discografia__down discografia__down"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.discografia__up {
+  grid-area: discografia__up;
+}
+
+.discografia__down {
+  grid-area: discografia__down;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.container__galeria {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "fotos fotos fotos"
+    "videos videos videos"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.fotos {
+  grid-area: fotos;
+}
+
+.videos {
+  grid-area: videos;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.container__contacto {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "contacto contacto contacto"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.contacto {
+  grid-area: contacto;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Fin Maquetado Grid */
+
+/* Pagina Inicio*/
+
+body {
+  background: url(../assets/image/sonatafondo.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header {
   background-color: rgba(80, 80, 80, 0.3);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  color: aliceblue;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+
+.footer {
+  background-color: rgba(80, 80, 80, 0.3);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  color: aliceblue;
+}
+
+.encabezado__logo {
+  margin: 0 auto;
+  display: block;
+}
+
+.menu__lista {
+  text-align: center;
+  font-family: "Nunito", "Times New Roman", sans-serif;
+}
+
+.menu__lista__objeto {
+  display: inline-block;
+  padding: 5px;
+}
+
+.menu__lista__objeto a {
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: "Poppins", "Times New Roman", sans-serif;
+}
+
+.menu__busqueda {
+  text-align: center;
+  padding: 10px;
+}
+
+.carrusel {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.carrusel__bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carrusel__bienvenida__imagen {
+  opacity: 0.9;
+  margin: 5px;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+.bienvenida__inferior {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bienvenida h1 {
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  width: fit-content;
+  background-color: rgba(160, 160, 160, 0.7);
+  color: black;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+.bienvenida__inferior p {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  border-radius: 20px;
+  background-color: rgba(160, 160, 160, 0.7);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  font-size: 1.2em;
+  margin: 12px;
+  padding: 12px 20px;
+  color: black;
+  border: inset 1px rgba(160, 160, 160, 0.7);
+}
+
+.pie__texto {
+  width: fit-content;
+  margin: 5px;
+  font-size: 1em;
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  margin: auto 20px;
+}
+
+.pie__iconos {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px auto;
+}
+
+.pie__iconos a img {
+  background-color: rgba(160, 160, 160, 0.6);
+  height: 48px;
+  width: 48px;
+}
+
+.pie__derechos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: auto 20px;
+  font-family: "Poppins", "Times New Roman", sans-serif;
+}
+
+/* Fin Pagina Inicio */
+
+/* Pagina Historia */
+
+.historia__up,
+.historia__down {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.historia__superior,
+.historia__inferior {
+  display: flex;
+  align-content: center;
+}
+
+.historia__up h1,
+.historia__down h2 {
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  width: fit-content;
+  background-color: rgba(160, 160, 160, 0.7);
+  color: black;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+.historia__superior__contenido p,
+.historia__inferior__contenido p {
+  width: auto;
+  border-radius: 20px;
+  background-color: rgba(160, 160, 160, 0.7);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  font-size: 1.2em;
+  margin: 12px;
+  padding: 12px 20px;
+  color: black;
+  border: inset 1px rgba(160, 160, 160, 0.7);
+}
+
+.historia__superior__imagen,
+.historia__inferior__imagen {
+  opacity: 0.9;
+  margin: 12px 20px;
+}
+
+/* Fin Pagina Historia */
+
+/* Pagina Discografia */
+
+.discografia__up h1,
+.discografia__down h2 {
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  width: fit-content;
+  background-color: rgba(160, 160, 160, 0.7);
+  color: black;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+.discografia__lista__discos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.discografia__lista__discos li {
+  background-color: rgba(160, 160, 160, 0.7);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: black;
+  border: inset 1px rgba(160, 160, 160, 0.7);
+  list-style-type: none;
+}
+
+.discografia__inferior__contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.discografia__inferior__lista {
+  list-style-type: none;
+  background-color: rgba(160, 160, 160, 0.7);
+  font-family: "Poppins", "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 20px auto;
+  color: black;
+  border: inset 1px rgba(160, 160, 160, 0.7);
+  border-radius: 20px;
+}
+
+/* Fin Pagina Discografia */
+
+/* Pagina Galeria */
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.galeria__fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria__fotos__objeto {
+  opacity: 0.9;
+  margin: 5px;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+.galeria__superior h1,
+.galeria__videos h2 {
+  background-color: rgba(160, 160, 160, 0.7);
+  color: black;
+  font-weight: 800;
+  font-size: 3em;
+  width: 100%;
+  width: fit-content;
+  margin: 20px auto;
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+  border-radius: 20px;
 }
 
 
-/* body {
-  background: url(../assets/image/sonatafondo.png) no-repeat center center fixed;
-  background-size: cover;
-  font-weight: bolder;
-  color: rgb(220, 200, 200);
-} */
+.galeria__videos div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
 
-/* .color {
-  background-color: rgba(80, 80, 80, 0.3);
-  border-radius: 20px;
-  font-weight: bolder;
-  color: rgb(220, 200, 200);
-} */
+.galeria__superior__objeto,
+.galeria__inferior__objeto {
+  display: flex;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 320px;
+  margin: 5px;
+  align-self: center;
+  opacity: 0.9;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
 
-.padding {
-  padding-top: 10rem;
+.galeria__videos__enlace {
+  height: 250px;
+  width: 320px;
+  margin: 10px;
+  align-self: center;
+  opacity: 0.9;
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+/* Fin Pagina Galeria */
+
+/* Pagina Contaco*/
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin: 320px auto;
+  font-weight: 800;
+  font-size: 1em;
+  font-family: 'Nunito','Times New Roman', sans-serif;
+}
+
+.contacto form fieldset textarea {
+  width: 30vw;
+  height: 30vh;
+}
+
+.contacto__formulario {
+  background-color: rgba(160, 160, 160, 0.7);
+  border: outset 1px rgba(160, 160, 160, 0.7);
+}
+
+/* Fin Contacto */
+
+/* Media Query */
+
+@media screen and (max-width: 1024px) {
+  .container__index {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "carrusel" auto
+      "bienvenida" auto
+      "footer" auto;
+  }
+
+  .container__historia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "historia__up" auto
+      "historia__down" auto
+      "footer" auto;
+  }
+
+  .historia__superior,
+  .historia__inferior {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .container__discografia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "discografia" auto
+      "reproductor" auto
+      "footer" auto;
+  }
+
+  .container__galeria {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "fotos" auto
+      "videos" auto
+      "footer" auto;
+  }
+
+  img {
+    width: 20vh;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container__index {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "carrusel" auto
+      "bienvenida" auto
+      "footer" auto;
+  }
+
+  .container__historia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "historia__up" auto
+      "historia__down" auto
+      "footer" auto;
+  }
+
+  .historia__superior,
+  .historia__inferior {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .container__discografia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "discografia" auto
+      "reproductor" auto
+      "footer" auto;
+  }
+
+  .container__galeria {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "fotos" auto
+      "videos" auto
+      "footer" auto;
+  }
+
+  .container__contacto {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "contacto" auto
+      "footer" auto;
+  }
+
+  img {
+    width: 20vh;
+  }
+  
+  .mobile {
+    width: 90%;
+  }
+
+  .galeria__videos__enlace {
+    width: 90%;
+  }
+  
+
+}
+
+@media screen and (max-width: 320px) {
+  .container__index {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "carrusel" auto
+      "bienvenida" auto
+      "footer" auto;
+  }
+
+  .container__historia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "historia__up" auto
+      "historia__down" auto
+      "footer" auto;
+  }
+
+
+  .historia__superior,
+  .historia__inferior {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .container__discografia {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "discografia" auto
+      "reproductor" auto
+      "footer" auto;
+  }
+
+  .container__galeria {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "fotos" auto
+      "videos" auto
+      "footer" auto;
+  }
+
+  .container__contacto {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas:
+      "header" auto
+      "contacto" auto
+      "footer" auto;
+  }
+
+  .mobile {
+    width: 90%;
+  }
+
+  img {
+    display: none;
+  }
+
+}
+
+/* Fin Media Query */
+
+/* Animaciones y Transiciones */
+
+.header a:hover {
+  color: black;
+}
+
+.menu__lista__objeto:hover {
+  transform: scale(1.1);
 }
