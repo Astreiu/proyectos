@@ -4,11 +4,11 @@
 }
 
 
-.header__changes {
+.header__changes,
+footer {
   background-color: rgba(80, 80, 80, 0.3);
-  z-index: 1;
-  
 }
+
 
 /* body {
   background: url(../assets/image/sonatafondo.png) no-repeat center center fixed;
@@ -23,3 +23,7 @@
   font-weight: bolder;
   color: rgb(220, 200, 200);
 } */
+
+.padding {
+  padding-top: 10rem;
+}

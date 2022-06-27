@@ -22,7 +22,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg header__changes position-fixed w-100 top-0">
+    <nav class="navbar navbar-expand-lg header__changes fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="encabezado__logo animate__animated animate__pulse"
             src="../assets/image/sonatalogo.png" alt="Logo" />
@@ -32,7 +32,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
             </li>
@@ -48,6 +48,21 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+    
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,36 +73,60 @@
     </nav>
   </header>
 
-  <section class="container-fluid p-4">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img src="https://dummyimage.com/600x400/000/fff.png&text=Imagen" class="d-block w-100"
-            alt="Hombre con guitarra">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="https://dummyimage.com/600x400/000/fff.png&text=Imagen" class="d-block w-100"
-            alt="Integrantes Banda">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="https://dummyimage.com/600x400/000/fff.png&text=Imagen" class="d-block w-100" alt="Hombre cantando">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="https://dummyimage.com/600x400/000/fff.png&text=Imagen" class="d-block w-100" alt="Recital en vivo">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  
+  <!-- Grid Discografia -->
+  <div class="container__discografia">
+    <div class="header">
+        <header class="encabezado">
+            <a href="../index.html">
+                <!-- Imagen con animacion aplicada -efecto- -->
+                <img class="encabezado__logo animate__animated animate__pulse" src="../assets/image/sonatalogo.png" alt="Logo" />
+            </a>
+            <nav>
+                <!-- Lista con transicion aplicada -cambio de color- -->
+                <ul class="menu__lista">
+                    <li class="menu__lista__objeto">
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li class="menu__lista__objeto">
+                        <a href="historia.html">Historia</a>
+                    </li>
+                    <li class="menu__lista__objeto">
+                        <a href="discografia.html">Discografia</a>
+                    </li>
+                    <li class="menu__lista__objeto">
+                        <a href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="menu__lista__objeto">
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     </div>
-  </section>
+    
+    <div>
+        <h2>Reproductor</h2>
+        <section>
+            <div>
+                <iframe class="mobile" width="400" height="300" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/5YeoQ1L71cXDMpSpqxOjfH?utm_source=generator"
+                    width="100%" height="380" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <div>
+                <ul>
+                    <li>Nuevos Lanzamientos</li>
+                    <li><a href="">Item 1</a></li>
+                    <li><a href="">Item 2</a></li>
+                    <li><a href="">Item 3</a></li>
+                    <li><a href="">Item 4</a></li>
+                    <li><a href="">Item 5</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
 
   <section class="container-fluid">
     
