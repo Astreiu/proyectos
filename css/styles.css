@@ -3,19 +3,25 @@
   padding: 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap");
 
-.header__changes,
+
+
+.nav__valores,
 footer {
-  background-color: rgba(80, 80, 80, 0.3);
+  background-color: rgb(41, 41, 41);
+  color: aliceblue;
 }
 
+.navbar__valores {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
 
-/* body {
+body {
   background: url(../assets/image/sonatafondo.png) no-repeat center center fixed;
   background-size: cover;
-  font-weight: bolder;
-  color: rgb(220, 200, 200);
-} */
+}
 
 /* .color {
   background-color: rgba(80, 80, 80, 0.3);
@@ -24,7 +30,13 @@ footer {
   color: rgb(220, 200, 200);
 } */
 
-.padding {
-  padding-top: 7rem;
-  margin-top: 7rem;
+.padding__sectionspace {
+  padding-top: 10rem;
+  margin-top: 10rem;
+}
+
+.titulos__valores {
+  font-size: 5rem;
+  background-color: black;
+  
 }
