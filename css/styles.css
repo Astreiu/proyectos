@@ -23,20 +23,76 @@ body {
   background-size: cover;
 }
 
-/* .color {
-  background-color: rgba(80, 80, 80, 0.3);
+.color {
+  background-color: rgb(41, 41, 41);
   border-radius: 20px;
   font-weight: bolder;
-  color: rgb(220, 200, 200);
-} */
+  color: aliceblue;
+}
 
 .padding__sectionspace {
   padding-top: 10rem;
   margin-top: 10rem;
 }
 
+.padding__contact {
+  padding: 20rem 0;
+}
+
 .titulos__valores {
-  font-size: 5rem;
-  background-color: black;
-  
+  display: flex;
+  font-size: 4.5rem;
+  background-color: rgb(41, 41, 41);
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.titulo_contacto {
+  display: flex;
+  justify-content: center;
+  font-size: 4.5rem;
+  width: fit-content;
+  border-radius: 20px;
+  color: aliceblue;
+}
+
+.responsive-video {
+  position: relative;
+  padding-top: 60px; overflow: hidden;
+}
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container div h1 {
+  margin-bottom: 40px;
+}
+
+label {
+  color: #333;
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  margin-left: 3px;
+  }
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px;
+
+}
+
+.card{
+margin-left: 10px;
+margin-right: 10px;
 }
